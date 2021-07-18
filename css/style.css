@@ -66,16 +66,26 @@ header .menu ul li {
 header .menu ul li a {
   color: var(--azul_o);
   text-decoration: none;
+  transition: all 0.5s;
   margin: 0 1rem;
+}
+
+header .fa-bars {
+  display: none;
 }
 
 /* Estilos del Main Sección Principal*/
 
 main .principal {
   display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 main .principal .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 4rem;
 }
 
@@ -85,6 +95,7 @@ main .principal .content h1 {
   color: var(--azul_o);
   line-height: 3.1rem;
   margin-bottom: 1.5rem;
+  width: 35vw;
 }
 
 main .principal .content p {
@@ -92,10 +103,16 @@ main .principal .content p {
   margin-bottom: 1.5rem;
 }
 
+main .principal .content img {
+  width: 19rem;
+}
+
 /* Estilos del Main Sección Media*/
 
 main .media {
   display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 main .media .content {
@@ -105,6 +122,11 @@ main .media .content {
 main .media .content h2 {
   color: var(--azul_o);
   font-size: 2rem;
+  width: 35vw;
+}
+
+main .media .content .funtion {
+  width: 35vw;
 }
 
 main .media .content h6 {
@@ -112,6 +134,7 @@ main .media .content h6 {
   font-size: 1rem;
   font-weight: 700;
   margin-top: 1rem;
+  width: 35vw;
 }
 
 main .media .content .content_item {
@@ -127,11 +150,13 @@ main .media .content .content_item .item {
   background-color: var(--rojo_b);
   border-radius: 50px;
   padding: 0.7rem 1.5rem;
+  width: min-content;
 }
 
 main .media .content .content_item p {
   color: var(--azul_g_o);
   margin-top: 1rem;
+  width: 35vw;
 }
 
 /* Estilos del Main Sección Social*/
@@ -144,8 +169,10 @@ main .social {
 
 main .social .content_social {
   display: flex;
-  background-color: var(--gris_c);
-  margin: 6rem 0 3rem 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  margin: 2rem 0 3rem 0;
   padding-top: 4rem;
 }
 
@@ -155,7 +182,11 @@ main .social .content_social article {
   justify-content: center;
   align-items: center;
   position: relative;
+  background-color: var(--gris_c);
   padding: 1rem;
+  margin-top: 8rem;
+  max-width: 28rem;
+  min-width: 18rem;
 }
 
 main .social .content_social article img {
@@ -171,7 +202,8 @@ main .social .content_social article h6 {
 main .social .content_social article p {
   color: var(--azul_g_o);
   text-align: center;
-  width: 28vw;
+  max-width: 28vw;
+  min-width: 18rem;
 }
 
 /* Estilos del Main Seccion Final */
@@ -190,7 +222,7 @@ main .final {
 
 main .final h2 {
   color: #ffffff;
-  width: 23vw;
+  width: 30vw;
 }
 
 main .final button {
@@ -214,6 +246,11 @@ footer .footer_top {
   justify-content: space-evenly;
 }
 
+footer .content_left {
+  display: flex;
+  flex-direction: column;
+}
+
 footer .content_left img {
   margin: 2rem 0 1rem 0;
 }
@@ -225,8 +262,13 @@ footer .content_left .social_media i {
   transition: all 0.4s;
 }
 
+footer .footer_top .listas {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 footer ul {
-  margin: 1rem 0;
+  margin: 1rem 2rem;
 }
 
 footer ul li {
@@ -277,6 +319,10 @@ button:hover {
   background-color: rgb(243, 121, 91);
 }
 
+header .menu ul li a:hover {
+  color: var(--azul_g_o);
+}
+
 main .final button:hover {
   background-color: rgb(243, 121, 91);
   color: #ffffff;
@@ -288,4 +334,63 @@ footer .content_left .social_media i:hover {
 
 footer ul li a:hover {
   color: var(--rojo_b);
+}
+
+/* Diseño Responsive */
+
+@media (max-width: 730px) {
+  /* Estilos del Header */
+  header {
+    justify-content: space-between;
+  }
+  header .fa-bars {
+    display: inline-block;
+    font-size: 3rem;
+    margin: 0 2rem;
+  }
+  header .menu, header button {
+    display: none;
+  }
+  header img {
+    margin: 4rem 2rem;
+  }
+  /* Estilos del Main */
+  main .principal .content h1, main .principal .content p {
+    width: 55vw;
+    text-align: center;
+  }
+  main .media .content h2, main .media .content .funtion {
+    width: 55vw;
+    text-align: center;
+  }
+  main .final {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .final h2 {
+    text-align: center;
+    width: 80vw;
+    margin-bottom: 0.5rem;
+  }
+  /* Estilos del Footer */
+  footer .footer_top {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer_top .content_left {
+    order: 2;
+  }
+  footer .footer_top .listas {
+    order: 1;
+  }
+  footer .footer_top form {
+    order: 0;
+    margin-top: 1rem;
+  }
+  footer .content_left img {
+    order: 1;
+  }
+  footer .content_left .social_media {
+    order: 0;
+  }
 }
