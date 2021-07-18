@@ -1,0 +1,197 @@
+/* CONFIGURACION */
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@400;500;700&display=swap');
+
+:root {
+  /* Colores Primarios */
+  --rojo_b: rgb(242, 95, 58);
+  --azul_o: rgb(35, 44, 81);
+  /* Colores Neutros */
+  --azul_g_o: rgb(143, 148, 167);
+  --azul_m_o: rgb(29, 30, 37);
+  --rojo_m_p: rgb(255, 239, 234);
+  --gris_c: rgb(249, 249, 249);
+  --Be_Vietnam: 'Be Vietnam', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: var(--Be_Vietnam);
+}
+
+/* Estilos del Body */
+
+body {
+  background-image: url("../img/bg-tablet-pattern.svg");
+  background-position: bottom right;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  background-color: var(--rojo_b);
+  padding: 0.8rem 0.8rem;
+  border-radius: 50px;
+}
+
+/* Estilos del Header */
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+header img {
+  margin: 4rem 0;
+}
+
+header .menu ul {
+  display: flex;
+}
+
+header .menu ul li {
+  list-style: none;
+}
+
+header .menu ul li a {
+  color: var(--azul_o);
+  text-decoration: none;
+  margin: 0 1rem;
+}
+
+/* Estilos del Main Sección Principal*/
+
+main .principal {
+  display: flex;
+}
+
+main .principal .content {
+  padding: 4rem;
+}
+
+main .principal .content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--azul_o);
+  line-height: 3.1rem;
+  margin-bottom: 1.5rem;
+}
+
+main .principal .content p {
+  width: 30vw;
+  margin-bottom: 1.5rem;
+}
+
+/* Estilos del Main Sección Media*/
+
+main .media {
+  display: flex;
+}
+
+main .media .content {
+  padding: 4rem;
+}
+
+main .media .content h2 {
+  color: var(--azul_o);
+  font-size: 2rem;
+}
+
+main .media .content h6 {
+  color: var(--azul_o);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+main .media .content .content_item {
+  display: flex;
+  position: relative;
+}
+
+main .media .content .content_item .item {
+  position: absolute;
+  left: -6rem;
+  top: -3rem;
+  color: #ffffff;
+  background-color: var(--rojo_b);
+  border-radius: 50px;
+  padding: 0.7rem 1.5rem;
+}
+
+main .media .content .content_item p {
+  color: var(--azul_g_o);
+  margin-top: 1rem;
+}
+
+/* Estilos del Main Sección Social*/
+
+main .social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .social .content_social {
+  display: flex;
+  background-color: var(--gris_c);
+  margin: 6rem 0 3rem 0;
+  padding-top: 4rem;
+}
+
+main .social .content_social article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 1rem;
+}
+
+main .social .content_social article img {
+  position: absolute;
+  top: -8rem;
+}
+
+main .social .content_social article h6 {
+  color: var(--azul_o);
+  font-size: 1rem;
+}
+
+main .social .content_social article p {
+  color: var(--azul_g_o);
+  text-align: center;
+  width: 28vw;
+}
+
+/* Estilos del Main Seccion Final */
+
+main .final {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--rojo_b);
+  margin-top: 4rem;
+  padding: 2rem 0;
+}
+
+main .final h2 {
+  color: #ffffff;
+  width: 23vw;
+}
+
+main .final button {
+  color: var(--rojo_b);
+  background-color: #ffffff;
+  box-shadow: 0 0 1rem 0 black;
+  height: 1.8rem;
+  padding: 0 1rem;
+}
+
