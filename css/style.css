@@ -169,11 +169,12 @@ main .social {
 
 main .social .content_social {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  
-  margin: 2rem 0 3rem 0;
-  padding-top: 4rem;
+  width: 90vw;
+  height: 300px;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  margin: 2rem auto;
+  text-align: center;
 }
 
 main .social .content_social article {
@@ -355,12 +356,27 @@ footer ul li a:hover {
     margin: 4rem 2rem;
   }
   /* Estilos del Main */
+  main .principal, main .media {
+    flex-direction: column;
+    align-items: center;
+  }
+  main .principal .content {
+    padding: 0;
+  }
   main .principal .content h1, main .principal .content p {
     width: 55vw;
     text-align: center;
   }
+  main .principal .content img {
+    margin: 1rem 0;
+  }
+  main .media .content {
+  padding: 0;
+  margin: 2rem 0;
+  }
   main .media .content h2, main .media .content .funtion {
-    width: 55vw;
+    margin: 1rem 0;
+    width: 65vw;
     text-align: center;
   }
   main .final {
@@ -392,5 +408,48 @@ footer ul li a:hover {
   }
   footer .content_left .social_media {
     order: 0;
+  }
+}
+
+@media (max-width: 430px) {
+  /* Estilos del Header */
+  header .fa-bars {
+    font-size: 2rem;
+  }
+  /* Estilos del Main */
+  main .principal .content h1 {
+    font-size: 2rem;
+    width: 65vw;
+  }
+  main .principal .content p {
+    font-size: 0.8rem;
+  }
+  main .media .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  main .media .content h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.8rem 0;
+  }
+  main .media .content h6 {
+    text-align: center;
+    width: 65vw;
+  }
+  main .media .content .funtion {
+    font-size: 0.8rem;
+    margin: 0.8rem 0;
+  }
+  main .media .content .content_item p {
+    font-size: 0.8rem;
+    width: 65vw;
+  }
+  main .media .content .content_item .item {
+    left: -3rem;
+    top: -2.2rem;
+    padding: 0.3rem 0.7rem;
   }
 }
